@@ -1,0 +1,105 @@
+section { position: relative; overflow: hidden; }
+
+/* ---------- 1. HERO ---------- */
+.hero { position: relative; overflow: hidden; padding: 5rem 0; text-align: center; display: flex; align-items: center; min-height: calc(1.5 * (10rem + clamp(220px, 26vw, 330px))); }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero::before { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .55); z-index: 1; pointer-events: none; }
+.hero .contenedor { position: relative; z-index: 2; }
+.hero .lateral { z-index: 2; filter: invert(1); }
+@media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
+.hero .lateral { position: absolute; top: 3rem; width: clamp(180px, 22vw, 300px); }
+.hero .lateral.izq { left: 1%; }
+.hero .lateral.der { right: 1%; transform: scaleX(-1); }
+.hero .logo { width: clamp(220px, 26vw, 330px); margin: 0 auto; display: block; }
+.presentacion { padding: 2rem 0 5rem; text-align: center; }
+.presentacion h1 { font-size: clamp(3rem, 6vw, 4.8rem); margin-top: 1rem; }
+.presentacion h1 a { text-decoration: none; }
+.presentacion .lema { font-family: var(--f-titulo); font-size: .95rem; letter-spacing: .05em; color: var(--negro); }
+.pilares { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2rem; margin-top: 3rem; position: relative; }
+/* El contenedor es transparente: solo el cuerpo es blanco, así las esquinas del arco muestran el fondo global */
+.pilar { background: transparent; }
+.pilar .arco { height: 190px; display: grid; place-items: center; }
+.pilar .cuerpo { background: var(--blanco); box-shadow: 0 4px 14px rgba(0, 0, 0, .06); }
+.pilar .arco img { width: 38%; height: auto; object-fit: contain; }
+.pilar .arco .wordmark { font-family: var(--f-titulo); color: #fff; font-size: 2.6rem; }
+.pilar .cuerpo { padding: 1rem 1.3rem 1.4rem; text-align: center; }
+.pilar h3 { font-family: var(--f-titulo); color: var(--negro); font-size: 1.15rem; margin-bottom: .4rem; }
+.pilar p { font-size: .9rem; }
+
+/* ---------- 2. RAMOS ---------- */
+.ramos { padding: 2rem 0 0; }
+.ramo-destacado { display: grid; grid-template-columns: 1fr 1fr; align-items: center; margin-top: 5rem; }
+.ramo-destacado .texto { max-width: 300px; padding: 0; margin: 0 auto; }
+.ramo-destacado h3 { font-size: 1.5rem; margin-bottom: .6rem; }
+.ramo-destacado .foto { position: relative; aspect-ratio: 1 / 1; max-width: 700px; margin: 0 auto; }
+.ramo-destacado .foto img { width: 100%; height: 100%; object-fit: contain; object-position: center; transform: rotate(-45deg) scale(1.12); }
+
+/* ---------- 3. PRODUCTOS + ANIVERSARIO ---------- */
+.productos { padding: 2rem 0 5rem; }
+.tarjetas-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; justify-items: center; }
+.tarjeta-ramo { max-width: 280px; text-align: center; }
+.tarjeta-ramo .arco { aspect-ratio: 3 / 4; width: 100%; }
+.tarjeta-ramo.marco .arco { border-radius: 999px 999px 0 0; padding: 1.8rem 1.8rem 0; display: block; }
+.tarjeta-ramo.marco .arco img { border-radius: 0; }
+.tarjeta-ramo h3 { font-size: 1.5rem; margin: .8rem 0 .4rem; }
+.tarjeta-ramo a { text-decoration: none; }
+.tarjeta-ramo p { font-size: .9rem; }
+
+.aniversario { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; align-items: center; margin-top: 2rem; }
+.aniversario .ilustracion { position: relative; aspect-ratio: 2 / 3; width: 100%; max-width: 520px; margin: 0 auto; }
+.aniversario .ilustracion img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.aniversario .titulo-ornado { margin-bottom: 1.2rem; }
+.aniversario .titulo-ornado h2 { font-size: 1.7rem; }
+.fila-circulo { display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem; }
+.fila-circulo .circulo { flex: 0 0 110px; height: 110px; }
+.fila-circulo.inversa { flex-direction: row-reverse; }
+
+/* ---------- 4. FLORES ETERNAS + PÉSAME ---------- */
+.eternas { padding: 3rem 0 4rem; }
+.eternas .intro { margin: 1.5rem auto 3rem; max-width: 680px; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.item-eterno { display: flex; align-items: flex-end; justify-content: center; gap: 1.4rem; }
+.item-eterno > div:not(.arco) { max-width: 230px; }
+.item-eterno .arco { flex: 0 0 210px; height: 320px; }
+.item-eterno.inverso { flex-direction: row-reverse; }
+.item-eterno h3 { font-size: 1.6rem; margin-bottom: .4rem; }
+.item-eterno p { font-size: .9rem; }
+
+.pesame { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; padding: 8rem 0 5rem; }
+.pesame .arco { aspect-ratio: 3 / 4; max-width: 400px; margin: 0 auto; }
+.pesame .ornamento { display: block; margin: 0 auto .4rem; width: 100px; }
+.pesame h2 { font-size: clamp(2.4rem, 4.4vw, 3.4rem); margin-bottom: 1.6rem; }
+
+/* ---------- 5. CONTACTOS ---------- */
+.contactos { padding: 4rem 0 6rem; text-align: center; min-height: 420px; }
+.contactos h2 { font-size: clamp(2.4rem, 4.4vw, 3.4rem); margin-bottom: 3rem; }
+.contactos .esquina { position: absolute; width: clamp(120px, 14vw, 180px); }
+.contactos .esquina.sup { top: 0; left: 1rem; }
+.contactos .esquina.inf { bottom: 0; right: 1rem; transform: rotate(180deg); }
+.lista-contacto { display: inline-flex; flex-direction: column; gap: 1.6rem; text-align: left; }
+.lista-contacto a { display: flex; align-items: center; gap: 1.2rem; text-decoration: none; font-family: var(--f-titulo); color: var(--verde); font-size: 1.15rem; }
+.lista-contacto img { width: 40px; height: 40px; }
+
+/* ---------- MÓVIL ---------- */
+@media (max-width: 768px) {
+  .hero { padding-bottom: 3rem; min-height: calc(1.5 * (8rem + 220px)); }
+  .hero .lateral { width: 90px; top: 2rem; opacity: .8; }
+  .pilares, .tarjetas-3, .duo { grid-template-columns: 1fr; gap: 2rem; }
+  .pilares { margin-top: 3rem; }
+  .ramos { padding-top: 3rem; }
+  .ramo-destacado, .aniversario, .pesame { grid-template-columns: 1fr; gap: 1.5rem; }
+  .ramo-destacado { margin-top: 4rem; min-height: 0; }
+  .ramo-destacado .texto { padding: 0; max-width: none; order: 2; }
+  .ramo-destacado .foto { order: 1; margin: 0 auto; }
+  .aniversario .ilustracion { max-width: 340px; margin: 0 auto; }
+  .fila-circulo.inversa { flex-direction: row; }
+  .item-eterno, .item-eterno.inverso { flex-direction: row; }
+  .item-eterno { gap: 1rem; align-items: center; justify-content: flex-start; }
+  .item-eterno .arco { flex: 0 0 125px; height: 190px; }
+  .item-eterno > div:not(.arco) { max-width: none; flex: 1; min-width: 0; }
+  .item-eterno h3 { font-size: 1.3rem; }
+  .item-eterno p { font-size: .85rem; text-align: left; }
+  .pesame .arco { margin: 0 auto; width: 100%; }
+  .contactos .esquina { width: 90px; }
+  .tarjeta-ramo { max-width: 320px; }
+}

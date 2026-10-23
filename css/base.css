@@ -1,0 +1,129 @@
+:root {
+  --verde: #04553a;
+  --rosa: #e8719a;
+  --negro: #111;
+  --papel: #ededeb;
+  --nude: #d9b8ab;
+  --blanco: #fff;
+  --texto: #1b1b1b;
+  --f-titulo: "DM Serif Display", "Playfair Display", Georgia, serif;
+  --f-texto: "Montserrat", system-ui, sans-serif;
+  --ancho: 1200px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--f-texto);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--texto);
+  background-color: var(--papel);
+  /* textura de papel reciclado (ruido SVG) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.3  0 0 0 0 0.3  0 0 0 0 0.3  0 0 0 .22 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--f-titulo); color: var(--verde); font-weight: 400; margin: 0; }
+p { margin: 0 0 .8em; text-align: justify; }
+.contenedor { width: min(var(--ancho), 100% - 3rem); margin-inline: auto; }
+
+/* Título con ramitas a los lados */
+.titulo-ornado { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+.titulo-ornado h2 { font-size: clamp(2rem, 4vw, 3rem); }
+.titulo-ornado img { width: clamp(70px, 9vw, 120px); }
+.titulo-ornado img:last-child { transform: scaleX(-1); }
+
+/* Marco con arco superior + placeholder cuando falta la imagen */
+.arco {
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px 999px 0 0;
+  background: var(--nude);
+}
+.arco.verde { background: var(--verde); }
+.arco img { width: 100%; height: 100%; object-fit: cover; }
+.sin-imagen::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: url("../assets/img/ornamentos/flor-blanca.svg") center / 28% no-repeat;
+  opacity: .55;
+}
+.circulo { border-radius: 50%; overflow: hidden; position: relative; background: var(--nude); }
+.circulo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: .8rem 1.6rem;
+  background: var(--verde);
+  color: var(--blanco);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: .03em;
+  transition: transform .2s, background .2s;
+}
+.btn:hover { background: #033d2a; transform: translateY(-2px); }
+
+/* Animaciones de scroll: solo escritorio (reveal.js agrega .reveal-on) */
+.reveal-on [data-reveal] {
+  opacity: 0;
+  transition: opacity .9s ease-out, transform .9s ease-out;
+  transition-delay: var(--delay, 0s);
+}
+.reveal-on [data-reveal="left"]  { transform: translateX(-80px); }
+.reveal-on [data-reveal="right"] { transform: translateX(80px); }
+.reveal-on [data-reveal="up"]    { transform: translateY(40px); }
+.reveal-on [data-reveal].visible { opacity: 1; transform: none; }
+
+/* Navbar fija (se inyecta desde js/navbar.js en todas las páginas) */
+html { scroll-padding-top: 72px; }
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(237, 237, 235, .94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(4, 85, 58, .15);
+}
+.navbar .contenedor { display: flex; align-items: center; justify-content: space-between; min-height: 64px; }
+.navbar .marca { font-family: var(--f-titulo); font-size: 1.9rem; color: var(--verde); text-decoration: none; line-height: 1; }
+.navbar ul { display: flex; gap: 1.8rem; list-style: none; margin: 0; padding: 0; }
+.navbar ul a { text-decoration: none; color: var(--verde); font-weight: 600; padding: .3rem 0; border-bottom: 2px solid transparent; }
+.navbar ul a:hover, .navbar ul a.activo { border-bottom-color: var(--rosa); }
+.navbar .burger { display: none; background: none; border: 0; padding: .5rem; cursor: pointer; }
+.navbar .burger span { display: block; width: 24px; height: 2px; background: var(--verde); margin: 5px 0; transition: transform .25s, opacity .25s; }
+.navbar.abierto .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar.abierto .burger span:nth-child(2) { opacity: 0; }
+.navbar.abierto .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.pie { text-align: center; padding: 2rem 1rem; color: var(--verde); font-size: .9rem; }
+
+@media (max-width: 768px) {
+  body { font-size: 16px; }
+  .contenedor { width: calc(100% - 2rem); }
+  .titulo-ornado img { width: 56px; }
+  .navbar .burger { display: block; }
+  .navbar ul {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0; padding: .5rem 1rem 1rem;
+    background: var(--papel); border-bottom: 1px solid rgba(4, 85, 58, .15);
+  }
+  .navbar.abierto ul { display: flex; }
+  .navbar ul a { display: block; padding: .8rem 0; border-bottom: 1px solid rgba(4, 85, 58, .1); }
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Zoom al pasar el cursor sobre las imágenes */
+.arco img, .circulo img, .ilustracion img, .ramo-destacado .foto img { transition: transform .5s ease; }
+@media (hover: hover) {
+  .arco:hover img, .circulo:hover img, .ilustracion:hover img { transform: scale(1.08); }
+  .ramo-destacado .foto:hover img { transform: rotate(-45deg) scale(1.22); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .arco img, .circulo img, .ilustracion img, .ramo-destacado .foto img { transition: none; }
+}

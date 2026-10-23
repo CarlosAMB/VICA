@@ -1,0 +1,188 @@
+{
+  "categorias": [
+    {
+      "id": "ramos",
+      "nombre": "Ramos"
+    },
+    {
+      "id": "aniversario",
+      "nombre": "Aniversario"
+    },
+    {
+      "id": "flores-eternas",
+      "nombre": "Flores eternas"
+    },
+    {
+      "id": "sentido-pesame",
+      "nombre": "Sentido Pésame"
+    }
+  ],
+  "productos": [
+    {
+      "id": "ramo-buchon",
+      "nombre": "Ramo Buchón",
+      "categoria": "ramos",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "ramo-buchon-1.webp",
+        "ramo-buchon-1-2.webp",
+        "ramo-buchon-2.webp",
+        "ramo-buchon-3.webp",
+        "ramo-buchon-4.webp",
+        "ramo-buchon-5.webp",
+        "ramo-buchon-6.webp",
+        "ramo-buchon-6-1.webp",
+        "ramo-buchon-7.webp"
+      ]
+    },
+    {
+      "id": "mini-ramo",
+      "nombre": "Mini ramo",
+      "categoria": "ramos",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "mini-ramo-1.webp",
+        "mini-ramo-2.webp",
+        "mini-ramo-3.webp",
+        "mini-ramo-4.webp",
+        "mini-ramo-5.webp",
+        "mini-ramo-6.webp",
+        "mini-ramo-7.webp",
+        "mini-ramo-8.webp",
+        "mini-ramo-9.webp"
+      ]
+    },
+    {
+      "id": "ramo-mediano",
+      "nombre": "Ramo Mediano",
+      "categoria": "ramos",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "ramo-mediano-1.webp",
+        "ramo-mediano-2.webp",
+        "ramo-mediano-3.webp",
+        "ramo-mediano-4.webp",
+        "ramo-mediano-5.webp",
+        "ramo-mediano-6.webp",
+        "ramo-mediano-7.webp",
+        "ramo-mediano-8.webp",
+        "ramo-mediano-9.webp",
+        "ramo-mediano-10.webp",
+        "ramo-mediano-11.webp",
+        "ramo-mediano-12.webp",
+        "ramo-mediano-13.webp",
+        "ramo-mediano-14.webp",
+        "ramo-mediano-15.webp",
+        "ramo-mediano-16.webp",
+        "ramo-mediano-17.webp",
+        "ramo-mediano-18.webp",
+        "ramo-mediano-19.webp",
+        "ramo-mediano-20.webp",
+        "ramo-mediano-21.webp",
+        "ramo-mediano-22.webp",
+        "ramo-mediano-23.webp",
+        "ramo-mediano-24.webp",
+        "ramo-mediano-25.webp",
+        "ramo-mediano-26.webp",
+        "ramo-mediano-27.webp",
+        "ramo-mediano-28.webp",
+        "ramo-mediano-29.webp",
+        "ramo-mediano-30.webp",
+        "ramo-mediano-31.webp",
+        "ramo-mediano-32.webp",
+        "ramo-mediano-33.webp",
+        "ramo-mediano-34.webp",
+        "ramo-mediano-35.webp",
+        "ramo-mediano-36.webp"
+      ]
+    },
+    {
+      "id": "ramo-primavera",
+      "nombre": "Ramo primavera",
+      "categoria": "ramos",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "ramo-primavera.webp"
+      ]
+    },
+    {
+      "id": "aniversario-clasico",
+      "nombre": "Aniversario clásico",
+      "categoria": "aniversario",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "aniversario-clasico.webp"
+      ]
+    },
+    {
+      "id": "aniversario-tulipanes",
+      "nombre": "Aniversario tulipanes",
+      "categoria": "aniversario",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "aniversario-tulipanes.webp"
+      ]
+    },
+    {
+      "id": "amor-eterno",
+      "nombre": "Amor Eterno",
+      "categoria": "flores-eternas",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "amor-eterno.webp"
+      ]
+    },
+    {
+      "id": "juntos-por-siempre",
+      "nombre": "Juntos por siempre",
+      "categoria": "flores-eternas",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la",
+      "imagenes": [
+        "juntos-por-siempre.webp"
+      ]
+    },
+    {
+      "id": "sentido-pesame",
+      "nombre": "Sentido Pésame",
+      "categoria": "sentido-pesame",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "sentido-pesame-1.webp",
+        "sentido-pesame-2.webp",
+        "sentido-pesame-3.webp",
+        "sentido-pesame-4.webp"
+      ]
+    },
+    {
+      "id": "corona-blanca",
+      "nombre": "Corona blanca",
+      "categoria": "sentido-pesame",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "corona-blanca.webp"
+      ]
+    },
+    {
+      "id": "centro-de-mesa",
+      "nombre": "Centro de mesa",
+      "categoria": "ramos",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "centro-de-mesa.webp"
+      ]
+    },
+    {
+      "id": "arreglo-canasta",
+      "nombre": "Arreglo canasta",
+      "categoria": "ramos",
+      "descripcion": "La mariposa reboloteaba por la esquina de la casa pensando vagamente sobre el rosal que se veía por la ventana y las posibilidades de probar la embriagante libertad mientras su alma se desmorona en cada aleteo",
+      "imagenes": [
+        "arreglo-canasta-1.webp",
+        "arreglo-canasta-2.webp",
+        "arreglo-canasta-3.webp",
+        "arreglo-canasta-4.webp",
+        "arreglo-canasta-5.webp"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Originales pesados (el sitio usa los .webp)
+assets/img/productos/*.jpg
+assets/img/productos/*.png
+
+# Sistema / editor
+Thumbs.db
+.DS_Store
+node_modules/

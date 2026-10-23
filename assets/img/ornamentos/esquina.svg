@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <path id="l" d="M0 0 C 6 -10 16 -12 24 -8 C 20 2 10 6 0 0Z" fill="#111"/>
+  </defs>
+  <path d="M10 190 C 4 120 20 60 70 30 C 100 14 150 12 190 10"/>
+  <path d="M10 190 C 24 130 40 90 80 60 C 110 40 150 34 190 28" stroke="#666"/>
+  <path d="M30 100 C 18 90 20 74 34 72 C 46 72 48 86 38 90"/>
+  <path d="M70 30 C 62 18 70 6 82 10 C 90 14 88 24 80 24"/>
+  <path d="M14 150 C 28 150 36 140 34 128"/>
+  <g transform="translate(32 130) rotate(40)"><use href="#l"/></g>
+  <g transform="translate(24 80) rotate(-20)"><use href="#l"/></g>
+  <g transform="translate(46 50) rotate(-50)"><use href="#l"/></g>
+  <g transform="translate(100 22) rotate(-10)"><use href="#l"/></g>
+  <g transform="translate(140 14) rotate(0)"><use href="#l"/></g>
+  <g transform="translate(60 40) rotate(60)"><use href="#l"/></g>
+  <g transform="translate(18 170) rotate(80)"><use href="#l"/></g>
+  <g transform="translate(120 40) rotate(70)"><use href="#l"/></g>
+</svg>
